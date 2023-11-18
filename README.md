@@ -1,3 +1,3 @@
 # Cloud-Surfers-API
 
-Hello World
+Repository of T065-Cloud Surfers for Cathay Hackathon 2023
