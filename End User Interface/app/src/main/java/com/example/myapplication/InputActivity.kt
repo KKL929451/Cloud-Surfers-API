@@ -35,7 +35,10 @@ class InputActivity : AppCompatActivity() {
         currentToast?.show()
     }
     fun track_package(v: View?) {
-        GlobalScope.launch {
+        toast_maketext("Tracking your package " + packageID.text.toString())
+        val intent = Intent(this@InputActivity,     CustomerTrackingActivity::class.java)
+        startActivity(intent)
+        /*GlobalScope.launch {
             val str = track()
             runOnUiThread {
                 if(str=="Correct"){
@@ -48,7 +51,7 @@ class InputActivity : AppCompatActivity() {
                 }
 
             }
-        }
+        }*/
     }
     fun logout(v: View){
         val intent = Intent(this@InputActivity, ChooseIdentityActivity::class.java)
