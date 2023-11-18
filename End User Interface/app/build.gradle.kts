@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.myapplication"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.myapplication"
@@ -37,6 +37,8 @@ android {
 
 dependencies {
 
+    implementation("io.ktor:ktor-client-core:2.3.4")
+    implementation("io.ktor:ktor-client-cio:2.3.4")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
