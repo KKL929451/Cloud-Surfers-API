@@ -15,7 +15,11 @@ class ChooseActivity : AppCompatActivity() {
         startActivity(intent)
     }
     fun track(v: View){
-        val intent = Intent(this@ChooseActivity, InputActivity::class.java)
+        val intent = Intent(this@ChooseActivity, PackageListActivity::class.java)
+        startActivity(intent)
+    }
+    fun logout(v: View){
+        val intent = Intent(this@ChooseActivity, ChooseIdentityActivity::class.java)
         startActivity(intent)
     }
 

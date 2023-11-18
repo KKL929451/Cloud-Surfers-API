@@ -22,4 +22,4 @@ def regiser_shipping_company():
 
 @app.route("/estimate_cost")
 def estimate_cost():
-    return "$100"
+    return "$100"   

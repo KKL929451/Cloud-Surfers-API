@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".TrackingActivity"
+    tools:context=".CustomerTrackingActivity"
     tools:openDrawer="start">
 
     <!-- Main content for BagActivity -->
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="OJ-3426"
+                android:text="OJ-9797"
                 android:textSize="27sp" />
 
         </LinearLayout>

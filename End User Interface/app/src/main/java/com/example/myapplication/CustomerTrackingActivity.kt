@@ -4,14 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat.startActivity
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
-class TrackingActivity : AppCompatActivity() {
+class CustomerTrackingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tracking)
+        setContentView(R.layout.activity_customer_tracking)
+
         /*
          ***Fetch data from Flask server, to be implmented***
 
@@ -32,14 +36,15 @@ class TrackingActivity : AppCompatActivity() {
 
         */
     }
+
+
     suspend fun track(): String {
         val client = HttpClient()
         val response = client.get(getString(R.string.server_ip)+getString(R.string.track_package)+"packageID")
         return response.body()
     }
     fun home(v: View) {
-        val intent = Intent(this@TrackingActivity, ChooseActivity::class.java)
+        val intent = Intent(this@CustomerTrackingActivity, InputActivity::class.java)
         startActivity(intent)
     }
-
 }
